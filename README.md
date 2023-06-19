@@ -32,4 +32,4 @@ The steps made were:
 
 Currently, this model has a 0.78229 accuracy on the Kaggle platform dataset.
 
-For a more complete documentation, take a look at the titanic_survival_NN.ipynb notebook!
+For a more complete documentation, take a look at the *titanic_survival_NN.ipynb* notebook [here](titanic_survival_NN.ipynb)!
