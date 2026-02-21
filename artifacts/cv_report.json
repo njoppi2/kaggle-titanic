@@ -1,0 +1,40 @@
+{
+  "model": "sex_pclass_rate_baseline",
+  "folds": 5,
+  "mean_accuracy": 0.782242,
+  "fold_metrics": [
+    {
+      "fold": 0,
+      "train_rows": 713,
+      "validation_rows": 178,
+      "accuracy": 0.730337
+    },
+    {
+      "fold": 1,
+      "train_rows": 712,
+      "validation_rows": 179,
+      "accuracy": 0.804469
+    },
+    {
+      "fold": 2,
+      "train_rows": 713,
+      "validation_rows": 178,
+      "accuracy": 0.792135
+    },
+    {
+      "fold": 3,
+      "train_rows": 713,
+      "validation_rows": 178,
+      "accuracy": 0.842697
+    },
+    {
+      "fold": 4,
+      "train_rows": 713,
+      "validation_rows": 178,
+      "accuracy": 0.741573
+    }
+  ],
+  "generated_files": {
+    "submission": "solutions/cli_baseline_submission.csv"
+  }
+}

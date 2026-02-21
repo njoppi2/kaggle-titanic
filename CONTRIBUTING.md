@@ -13,6 +13,7 @@ pip install -r requirements.txt
 Run:
 
 ```bash
+python scripts/reproducible_baseline.py
 python -m unittest discover -s tests -p "test_*.py"
 ```
 

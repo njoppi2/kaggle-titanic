@@ -20,5 +20,8 @@ jobs:
       - name: Compile project sources
         run: python -m compileall xgboost.py
 
+      - name: Generate reproducible baseline artifacts
+        run: python scripts/reproducible_baseline.py
+
       - name: Validate solution files
         run: python -m unittest discover -s tests -p "test_*.py"

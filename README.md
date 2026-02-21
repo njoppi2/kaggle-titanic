@@ -49,11 +49,25 @@ Or run script experiment:
 python xgboost.py
 ```
 
+## Reproducible CLI Baseline
+
+Generate a deterministic baseline submission and CV report without opening notebooks:
+
+```bash
+python scripts/reproducible_baseline.py
+```
+
+Outputs:
+
+- `solutions/cli_baseline_submission.csv`
+- `artifacts/cv_report.json`
+
 ## Validation and CI
 
 Local check:
 
 ```bash
+python scripts/reproducible_baseline.py
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
