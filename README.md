@@ -1,33 +1,35 @@
 # Kaggle Titanic
 
-End-to-end ML project for Kaggle's Titanic competition: predict passenger survival from tabular features.
+[![CI](https://img.shields.io/github/actions/workflow/status/njoppi2/kaggle-titanic/ci.yml?branch=main&label=CI)](https://github.com/njoppi2/kaggle-titanic/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/njoppi2/kaggle-titanic)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/njoppi2/kaggle-titanic)](https://github.com/njoppi2/kaggle-titanic/commits/main)
+
+End-to-end ML competition project for Kaggle Titanic survival prediction from tabular passenger data.
+
+## Snapshot
+
+![Titanic ML workflow](docs/images/titanic-workflow.svg)
 
 ## Problem
 
-Given passenger information (`train.csv` / `test.csv`), build a model that predicts `Survived` for the unseen Kaggle test set.
+Given `train.csv` and `test.csv`, predict `Survived` for unseen passengers while maintaining transparent preprocessing and a reproducible submission workflow.
+
+## Tech Stack
+
+- Python (notebook and script workflows)
+- Jupyter Notebook
+- XGBoost / classical ML preprocessing
+- GitHub Actions (validation checks)
 
 ## Repository Layout
 
 - `data/`: competition train/test datasets
 - `titanic_survival_NN.ipynb`: main notebook (EDA, preprocessing, modeling)
-- `xgboost.py`: XGBoost experimentation script
-- `solutions/`: generated CSV submission files
+- `xgboost.py`: script-based model experimentation
+- `solutions/`: generated submission files
+- `tests/`: checks for generated output format/content
 
-## Approach Summary
-
-1. Data loading and inspection
-2. Feature engineering (for example title extraction and scaling)
-3. Missing-value handling (Embarked/Fare/Age strategies)
-4. Model training and evaluation
-5. Kaggle submission generation
-
-## Result
-
-Current best score in this repository: **0.78229** on Kaggle public leaderboard.
-
-## How to Run
-
-The project is notebook-first:
+## Quickstart
 
 ```bash
 python -m venv .venv
@@ -35,41 +37,46 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Then run:
+Run notebook:
 
 ```bash
 jupyter notebook titanic_survival_NN.ipynb
 ```
 
-or:
-
-```bash
-jupyter lab
-```
-
-Then run notebook cells in order.
-
-If you want to run the script experiment:
+Or run script experiment:
 
 ```bash
 python xgboost.py
 ```
 
-## Validation Checks
+## Validation and CI
 
-Run repository checks for generated solution files:
+Local check:
 
 ```bash
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
-## Notes
+CI (`.github/workflows/ci.yml`) validates Python syntax for `xgboost.py` and solution-file tests.
 
-- This repository focuses on explainable preprocessing and baseline modeling.
-- It is intended as an educational competition project rather than a production pipeline.
+## Results
 
-## Next Improvements
+- Best score in this repository: **0.78229** (Kaggle public leaderboard).
+- Includes notebook-first and script-based experimentation paths.
+- Includes automated checks for generated submission files.
 
-- Add a pinned `requirements.txt` for reproducibility.
+## Limitations
+
+- Workflow is still notebook-centered for main reproducibility path.
+- Hyperparameter search and CV reporting are limited.
+- No single CLI command yet to reproduce final submission end-to-end.
+
+## Roadmap
+
+- Add reproducible CLI pipeline for submission generation.
 - Add cross-validation report and feature-importance artifacts.
-- Add a small CLI to reproduce submissions without notebooks.
+- Add pinned environment lockfile for stronger reproducibility.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
