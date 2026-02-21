@@ -8,7 +8,9 @@ End-to-end ML competition project for Kaggle Titanic survival prediction from ta
 
 ## Snapshot
 
-![Titanic ML workflow](docs/images/titanic-workflow.svg)
+<p align="center">
+  <img src="docs/images/titanic-workflow.svg" alt="Titanic modeling workflow from raw data to submission and checks" width="900" />
+</p>
 
 ## Problem
 
