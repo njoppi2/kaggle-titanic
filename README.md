@@ -30,6 +30,14 @@ Current best score in this repository: **0.78229** on Kaggle public leaderboard.
 The project is notebook-first:
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Then run:
+
+```bash
 jupyter notebook titanic_survival_NN.ipynb
 ```
 
@@ -45,6 +53,14 @@ If you want to run the script experiment:
 
 ```bash
 python xgboost.py
+```
+
+## Validation Checks
+
+Run repository checks for generated solution files:
+
+```bash
+python -m unittest discover -s tests -p "test_*.py"
 ```
 
 ## Notes
